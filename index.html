@@ -15,23 +15,22 @@
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-TFTC676R');</script>
 
-  <!-- End Google Tag Manager -->
+  <!-- Google Tag Manager -->
 </head>
 
 <body>
-  <!-- Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager -->
 
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFTC676R" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
 
-  <!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager -->
 
   <h1>Impact 参数测试页面</h1>
   <div id="key1-value"></div>
   <div id="key2-value"></div>
 
   <script>
-    // 获取 URL 参数的函数
     function getUrlParameter(name) {
       name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
       var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
@@ -39,12 +38,10 @@
       return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
     }
 
-    // 显示参数值
     document.getElementById('key1-value').innerHTML = '键值1: ' + getUrlParameter('key1');
     document.getElementById('key2-value').innerHTML = '键值2: ' + getUrlParameter('key2');
 
-    // 将参数推送到数据层
-    window.dataLayer = window.dataLayer || [];
+       window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       'event': 'impactParamsCaptured',
       'customerid': getUrlParameter('key1'),
